@@ -1,1 +1,3 @@
-
+two ways to render website
+1-- simply dump the file in public and render it but 
+2--server side rendering and template engine 
