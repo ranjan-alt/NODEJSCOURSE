@@ -7,7 +7,7 @@ const createTask = (req, res) => {
 };
 
 const getTask = (req, res) => {
-  res.send("get tASK");
+  res.json({ id: req.params.id });
 };
 const updateTask = (req, res) => {
   res.send("update tASK");
