@@ -33,6 +33,11 @@ const getTask = async (req, res) => {
   }
 };
 const updateTask = (req, res) => {
+  try {
+    const { id: taskId } = req.params;
+
+    res.status(200).json({ id: taskId, data: req.body });
+  } catch (error) {}
   res.send("update tASK");
 };
 
@@ -47,7 +52,6 @@ const deleteTask = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error });
   }
-  
 };
 
 module.exports = {
