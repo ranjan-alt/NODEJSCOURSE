@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const tasks = require("./routes/tasks");
@@ -7,6 +8,7 @@ const connectDb = require("./db/connect");
 //middleware
 
 app.use(express.json());
+app.use(cors());
 
 //routes
 
@@ -16,7 +18,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/task", tasks);
 
-const port = 3000;
+const port = 5000;
 
 const start = async () => {
   try {

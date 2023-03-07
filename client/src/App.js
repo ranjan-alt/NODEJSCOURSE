@@ -6,8 +6,10 @@ function App() {
   const [users, setUsers] = useState([]);
   console.log(users);
   useEffect(() => {
-    axios.get("/").then((res) => setUsers(res.data));
-  });
+    axios
+      .get("http://localhost:5000/api/v1/task")
+      .then((res) => setUsers(res.data));
+  }, []);
   return <div className="App"></div>;
 }
 
